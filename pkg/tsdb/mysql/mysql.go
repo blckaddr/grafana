@@ -80,6 +80,7 @@ type mysqlQueryResultTransformer struct {
 	log log.Logger
 }
 
+// converter map to be implemented here
 func (t *mysqlQueryResultTransformer) TransformQueryResult(columnTypes []*sql.ColumnType, rows *core.Rows) (tsdb.RowValues, error) {
 	values := make([]interface{}, len(columnTypes))
 
